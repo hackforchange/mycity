@@ -1,0 +1,10 @@
+development:
+  database: mycity_dev
+  raise_not_found_error: false
+  allow_dynamic_fields: false
+
+test:
+  database: mycity_test
+  raise_not_found_error: false
+  allow_dynamic_fields: false
+
