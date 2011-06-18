@@ -16,6 +16,9 @@ gem 'kaminari'
 # coffeescript
 gem 'barista'
 
+# auth
+gem 'devise'
+
 group :development do
   gem 'therubyracer', :require => false
 end
