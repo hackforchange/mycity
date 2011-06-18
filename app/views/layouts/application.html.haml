@@ -1,10 +1,23 @@
 !!!html
-%html
+%html{ :lang => "en" }
   %head
-    %title MyCity
-
+    %title MyCity - It's your city, fix it.
+    %meta{ :'http-equiv' => "X-UA-Compatible", :content => "chrome=1" }
+    %meta{ :charset => "utf-8" }
+    = csrf_meta_tag
     = stylesheet_link_tag :all
     = javascript_include_tag :defaults
-    = csrf_meta_tag
-  %body
-    = yield
+    = yield :head
+  %body{:class => params[:controller].parameterize}
+    - if notice && !notice.blank?
+      .notices
+        .notice= notice
+
+    #mainContainer
+      #header
+        #logo mycity
+
+      = yield
+
+      #footer
+        %p designed, sliced, and coded by Team Awesome.
