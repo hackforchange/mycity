@@ -10,8 +10,11 @@ module Api
     def create
       @issue = Issue.new(params[:issue])
 
-      @issue.save
-      render :json => {:errors => @issue.errors}, :status => 403
+      if @issue.save
+        render :json => @issue
+      else
+        render :json => {:errors => @issue.errors}, :status => 403
+      end
     end
 
     def show
