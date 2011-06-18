@@ -2,6 +2,11 @@ module Api
   class IssuesController < ApplicationController
     respond_to :json
 
+    def index
+      @issues = Issue.all
+      render :json => @issues
+    end
+
     def create
       @issue = Issue.new(params[:issue])
 
