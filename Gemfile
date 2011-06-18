@@ -13,3 +13,6 @@ gem 'sass'
 gem 'compass'
 gem 'kaminari'
 
+# coffeescript
+gem 'barista'
+gem 'therubyracer', :require => false
