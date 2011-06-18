@@ -11,12 +11,17 @@ module Api
       @issue = Issue.new(params[:issue])
 
       @issue.save
-      render :json => @issue
+      render :json => {:errors => @issue.errors}, :status => 403
     end
 
     def show
       @issue = Issue.find(params[:id])
-      render :json => @issue
+
+      if @issue
+        render :json => @issue
+      else
+        render :json => "Not found", :status => 404
+      end
     end
   end
 end
