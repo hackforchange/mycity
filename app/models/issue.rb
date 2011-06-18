@@ -5,7 +5,7 @@ class Issue
   field :title
   field :description
 
-  validates_length_of :title, :in => 25..105, :allow_nil => false
+  validates_length_of :title, :in => 5..105, :allow_nil => false
 
   embeds_many :votes
 end
