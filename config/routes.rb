@@ -3,6 +3,8 @@ Mycity::Application.routes.draw do
   root :to => "home#index"
 
   namespace :api do
-    resources :issues
+    resources :issues do
+      resources :votes
+    end
   end
 end
