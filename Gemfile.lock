@@ -106,6 +106,7 @@ GEM
     term-ansicolor (1.0.5)
     therubyracer (0.9.1)
       libv8 (~> 3.3.10)
+    therubyracer-heroku (0.8.1.pre3)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
@@ -130,4 +131,5 @@ DEPENDENCIES
   rake (= 0.8.7)
   sass
   therubyracer
+  therubyracer-heroku (= 0.8.1.pre3)
   unicorn

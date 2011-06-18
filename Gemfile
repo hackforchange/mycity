@@ -15,7 +15,14 @@ gem 'kaminari'
 
 # coffeescript
 gem 'barista'
-gem 'therubyracer', :require => false
+
+group :development do
+  gem 'therubyracer', :require => false
+end
+
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+end
 
 # heroku
 gem 'heroku'
