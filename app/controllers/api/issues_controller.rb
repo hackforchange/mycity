@@ -1,17 +1,17 @@
 module Api
   class IssuesController < ApplicationController
-    def new
-      @issue = Issue.new
-    end
+    respond_to :json
 
     def create
       @issue = Issue.new(params[:issue])
 
-      if @issue.save
-        redirect_to :show
-      else
-        render :action => :new
-      end
+      @issue.save
+      render :json => @issue
+    end
+
+    def show
+      @issue = Issue.find(params[:id])
+      render :json => @issue
     end
   end
 end
