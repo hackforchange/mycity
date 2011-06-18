@@ -16,3 +16,6 @@ gem 'kaminari'
 # coffeescript
 gem 'barista'
 gem 'therubyracer', :require => false
+
+# heroku
+gem 'heroku'
