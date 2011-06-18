@@ -8,3 +8,6 @@ test:
   raise_not_found_error: false
   allow_dynamic_fields: false
 
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %>
+
