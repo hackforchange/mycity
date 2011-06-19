@@ -6,9 +6,10 @@ module Api
       @vote = current_user.votes.new(issue_id: params[:issue_id])
 
       if @vote.save
-        render :json => @vote
+        vote_count = Issue.find(params[:issue_id]).votes.count
+        render :json => { issue_id: @vote.issue_id, vote_count: vote_count }
       else
-        render :json => {:errors => @vote.errors}, :status => 403
+        render :json => { errors: @vote.errors }, status: 403
       end
     end
   end
