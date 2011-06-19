@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20110619132051) do
     t.string   "latitude"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "votes_count"
   end
 
   add_index "issues", ["latitude"], :name => "index_issues_on_latitude"

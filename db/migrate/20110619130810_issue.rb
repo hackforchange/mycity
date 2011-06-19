@@ -7,6 +7,8 @@ class Issue < ActiveRecord::Migration
       t.string :longitude
       t.string :latitude
       t.timestamps
+
+      t.integer :votes_count
     end
 
     add_index :issues, :tag

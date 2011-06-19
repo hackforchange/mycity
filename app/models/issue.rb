@@ -3,9 +3,6 @@ class Issue < ActiveRecord::Base
 
   has_many :votes
 
-  index :title
-  index :tag
-
   def as_json(opts={})
     super.merge(
       :votes_count => self.votes.count
@@ -13,10 +10,11 @@ class Issue < ActiveRecord::Base
   end
 
   def self.recent
-    all.desc(:created_at)
+    order { created_at.desc }
   end
 
   def self.popular
+    order { votes_count.desc }
   end
 
   def self.maintenence
