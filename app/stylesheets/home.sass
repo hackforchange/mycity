@@ -43,16 +43,19 @@
     li
       list-style: none
       float: left
-      color: #777777
-      font-size: 13px
       margin: 10px 15px 5px 0
       padding: 0
 
+      a
+        color: #777777
+        font-size: 13px
+
       padding-bottom: 5px
       &.active
-        font-weight: bold
-        color: $leaf-green
         border-bottom: 5px solid $leaf-green
+        a
+          font-weight: bold
+          color: $leaf-green
 
   .list
     padding-bottom: 36px

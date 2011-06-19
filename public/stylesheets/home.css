@@ -57,30 +57,36 @@
 #issues .nav li {
   list-style: none;
   float: left;
-  color: #777777;
-  font-size: 13px;
   margin: 10px 15px 5px 0;
   padding: 0;
   padding-bottom: 5px;
 }
-/* line 52, ../../app/stylesheets/home.sass */
+/* line 49, ../../app/stylesheets/home.sass */
+#issues .nav li a {
+  color: #777777;
+  font-size: 13px;
+}
+/* line 54, ../../app/stylesheets/home.sass */
 #issues .nav li.active {
-  font-weight: bold;
-  color: #58a83e;
   border-bottom: 5px solid #58a83e;
 }
-/* line 57, ../../app/stylesheets/home.sass */
+/* line 56, ../../app/stylesheets/home.sass */
+#issues .nav li.active a {
+  font-weight: bold;
+  color: #58a83e;
+}
+/* line 60, ../../app/stylesheets/home.sass */
 #issues .list {
   padding-bottom: 36px;
   border-bottom: 10px solid #777777;
   clear: left;
 }
-/* line 62, ../../app/stylesheets/home.sass */
+/* line 65, ../../app/stylesheets/home.sass */
 #issues .issue {
   position: relative;
   margin: 50px 0;
 }
-/* line 65, ../../app/stylesheets/home.sass */
+/* line 68, ../../app/stylesheets/home.sass */
 #issues .issue .created {
   border-bottom: solid 1px #d9d9d9;
   text-align: right;
@@ -88,18 +94,18 @@
   line-height: 15px;
   color: #777777;
 }
-/* line 71, ../../app/stylesheets/home.sass */
+/* line 74, ../../app/stylesheets/home.sass */
 #issues .issue .title {
   padding-top: 3px;
   font-size: 18px;
   line-height: 1.5em;
   color: #362f2d;
 }
-/* line 76, ../../app/stylesheets/home.sass */
+/* line 79, ../../app/stylesheets/home.sass */
 #issues .issue .description {
   margin: 10px;
 }
-/* line 78, ../../app/stylesheets/home.sass */
+/* line 81, ../../app/stylesheets/home.sass */
 #issues .issue .taged {
   border: solid 1px #cccccc;
   background: yellow;
@@ -107,14 +113,14 @@
   display: inline-block;
   padding: 3px 5px;
 }
-/* line 84, ../../app/stylesheets/home.sass */
+/* line 87, ../../app/stylesheets/home.sass */
 #issues .issue .vote {
   position: absolute;
   width: 60px;
   left: -80px;
   top: 15px;
 }
-/* line 89, ../../app/stylesheets/home.sass */
+/* line 92, ../../app/stylesheets/home.sass */
 #issues .issue .vote .count {
   background: #362f2d;
   font-size: 15px;
@@ -125,19 +131,19 @@
   font-size: 20px;
   color: #f8f8ee;
 }
-/* line 98, ../../app/stylesheets/home.sass */
+/* line 101, ../../app/stylesheets/home.sass */
 #issues .issue .vote .agree {
   background: green;
   padding: 5px;
   text-align: center;
 }
-/* line 102, ../../app/stylesheets/home.sass */
+/* line 105, ../../app/stylesheets/home.sass */
 #issues .issue .vote .agree a {
   color: white;
   font-weight: bold;
   font-size: 12px;
 }
-/* line 108, ../../app/stylesheets/home.sass */
+/* line 111, ../../app/stylesheets/home.sass */
 #issues .issue .vote .agree.agreed {
   background-color: #362f2d;
 }
