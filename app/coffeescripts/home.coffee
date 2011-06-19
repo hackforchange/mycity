@@ -26,6 +26,11 @@
       $(this).parent().parent().children('.count').html(response.vote_count)
       false
 
+    $('#new_issue').bind 'ajax:complete', (r, xhr) ->
+      response = xhr.responseText
+      $('#issues .list').prepend(response)
+      false
+
   $(document).ready(ready)
 )(jQuery)
 

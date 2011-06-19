@@ -2,7 +2,7 @@
   = stylesheet_link_tag 'home'
   = javascript_include_tag 'home'
 
-= form_for Issue.new do |f|
+= form_for Issue.new, :remote => true do |f|
   - placeholder = capture do
     &ndash; What are you concerning about in your city?
     &ndash; Give it some tags (ex: #traffic...)
