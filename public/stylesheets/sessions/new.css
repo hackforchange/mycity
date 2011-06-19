@@ -1,0 +1,22 @@
+/* line 5, ../../../app/stylesheets/sessions/new.sass */
+#sign-in {
+  width: 460px;
+  margin: 36px auto;
+  text-align: center;
+  margin: 10px auto;
+  width: 438px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  background-color: #d9d9d9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  overflow: auto;
+}
+/* line 18, ../../../app/stylesheets/sessions/new.sass */
+#sign-in label {
+  font-size: 14px;
+}

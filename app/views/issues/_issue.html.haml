@@ -5,7 +5,7 @@
       - if current_user
         = link_to 'agree?', api_issue_votes_path(issue), :remote => true, :method => :post
       - else
-        = link_to 'Login', new_user_session_path
+        = link_to 'agree?', new_user_session_path
   .created= issue.created_at
   .title= issue.title
   .description= issue.description

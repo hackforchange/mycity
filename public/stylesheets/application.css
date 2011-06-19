@@ -37,3 +37,37 @@ a {
   font-size: 10px;
   line-height: 18px;
 }
+
+/* line 39, ../../app/stylesheets/application.sass */
+input[type=submit] {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 5px 15px 6px;
+  font-size: 14px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #747474;
+  background-color: #58a83e;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #62ba45), color-stop(100%, #58a83e));
+  background-image: -webkit-linear-gradient(top, #62ba45, #58a83e);
+  background-image: -moz-linear-gradient(top, #62ba45, #58a83e);
+  background-image: -o-linear-gradient(top, #62ba45, #58a83e);
+  background-image: -ms-linear-gradient(top, #62ba45, #58a83e);
+  background-image: linear-gradient(top, #62ba45, #58a83e);
+  text-shadow: 0 -1px 0 #2b2b2b;
+  -moz-box-shadow: 0 1px 0 white;
+  -webkit-box-shadow: 0 1px 0 white;
+  -o-box-shadow: 0 1px 0 white;
+  box-shadow: 0 1px 0 white;
+  color: #f8f8ee;
+}
+/* line 51, ../../app/stylesheets/application.sass */
+input[type=submit]:active {
+  background-color: #448330;
+  text-shadow: 0 -1px 0 #1d3815;
+  border: solid 1px #72c158;
+}

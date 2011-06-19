@@ -1,17 +1,24 @@
-<h2>Sign in</h2>
+<%- content_for :head do -%>
+  <%= javascript_include_tag 'sessions/new' %>
+  <%= stylesheet_link_tag 'sessions/new' %>
+<%- end -%>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.email_field :email %></p>
+<div id="sign-in">
+  <h2>Sign in</h2>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <p><%= f.label :email %><br />
+    <%= f.email_field :email %></p>
 
-  <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
-  <% end -%>
+    <p><%= f.label :password %><br />
+    <%= f.password_field :password %></p>
 
-  <p><%= f.submit "Sign in" %></p>
-<% end %>
+    <% if devise_mapping.rememberable? -%>
+      <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+    <% end -%>
 
-<%= render :partial => "devise/shared/links" %>
+    <p><%= f.submit "Sign in" %></p>
+  <% end %>
+
+  <%= render :partial => "devise/shared/links" %>
+</div>
