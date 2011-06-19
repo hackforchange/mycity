@@ -1,13 +1,4 @@
-class Issue
-  include Mongoid::Document
-  include Mongoid::Timestamps
-
-  field :title
-  field :description
-  field :tag
-  field :longitude
-  field :latitude
-
+class Issue < ActiveRecord::Base
   validates_length_of :title, :in => 5..105, :allow_nil => false
 
   has_many :votes
