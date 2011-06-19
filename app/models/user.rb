@@ -11,7 +11,7 @@ class User
     trackable
     validatable
 
-  ).map &:to_sym
+  ).map(&:to_sym)
 
   has_many :votes
 end
