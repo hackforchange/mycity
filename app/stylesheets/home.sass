@@ -1,6 +1,7 @@
 @import compass/css3
 
 @import mixins/colors
+@import mixins/fonts
 @import mixins/metrics
 
 #new_issue
@@ -30,6 +31,9 @@
       border: solid 1px #72c158
 
   textarea
+    font-family: $font-serif
+    font-size: 14px
+    line-height: 20px
     padding: 15px
     display: block
     margin: 0 auto
@@ -37,19 +41,22 @@
     border-color: #CCC
     +border-radius(5px)
     &.default-text
-      color: #777777
+      color: #aaa
+    color: @color-dark
 
 #issues
   width: 460px
   margin: 0 auto
 
   .nav
+    border:
+      top: 10px solid #777777
     list-style: none
-    margin: 0
+    margin: 36px 0 18px
     padding: 0
+    overflow: hidden
     li
       list-style: none
-      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif
       float: left
       color: #777777
       font-size: 13px
@@ -62,19 +69,20 @@
         color: $leaf-green
         border-bottom: 5px solid $leaf-green
 
-  border:
-    top: 10px solid #777777
-    bottom: 10px solid #777777
-
   .list
+    padding-bottom: 36px
+    border-bottom: 10px solid #777777
     clear: left
 
   .issue
     position: relative
     margin: 50px 0
     .created
-      border-bottom: solid 1px black
+      border-bottom: solid 1px #D9D9D9
       text-align: right
+      font-size: 10px
+      line-height: 15px
+      color: #777
     .title
       padding-top: 3px
       font-size: 18px
@@ -92,16 +100,19 @@
       position: absolute
       width: 60px
       left: -80px
-      top: 10px
       border: solid 1px black
       +border-radius(5px)
+      top: 15px
       .count
-        background: #eee
+        background: $colorDark
+        font-size: 15px
+        line-height: 15px
         padding: 5px
         text-align: center
         font-weight: bold
         font-size: 20px
         +border-radius(5px 5px 0 0)
+        color: $off-white
       .agree
         background: green
         padding: 5px

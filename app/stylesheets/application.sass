@@ -1,11 +1,13 @@
 @import "reset.css"
 @import mixins/colors
+@import mixins/fonts
 @import compass/css3
+
 
 body
   font-size: 62.5%
   font-weight: 100
-  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif
+  font-family: $font-sans
 
 a
   text-decoration: none
@@ -22,7 +24,7 @@ a
 
     font:
       style: italic
-      family: Georgia,Times,"Times New Roman",serif
+      family: $font-serif
       size: 18px
 
     color: #777
@@ -36,6 +38,7 @@ a
   background: image-url('header/logo.png') top left no-repeat
 
 #currentLocation
+  background: image-url('icon-location.png') center right no-repeat
   text-align: center
   input
     display: inline-block
@@ -43,7 +46,7 @@ a
     font-size: 18px
     line-height: 1.5em
     font-style: italic
-    font-family: Georgia,Times,"Times New Roman",serif
+    font-family: $font-serif
     text-transform: capitalize
     color: #777777
     outline: none
@@ -62,7 +65,7 @@ a
     margin: 18px 0
     text-align: right
   textarea
-    font-family: Georgia,Times,"Times New Roman",serif
+    font-family: $font-serif
     border: solid 1px #cccccc
     width: 418px
     padding: 10px
