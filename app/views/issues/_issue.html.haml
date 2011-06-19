@@ -5,3 +5,6 @@
   .created= issue.created_at
   .title= issue.title
   .description= issue.description
+  - unless issue.tag.blank?
+    Tagged As:
+    .taged= issue.tag
