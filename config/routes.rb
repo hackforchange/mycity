@@ -1,6 +1,7 @@
 Mycity::Application.routes.draw do
   devise_for :users
 
+  resources :issues
   resources :home
   root :to => "home#index"
 
