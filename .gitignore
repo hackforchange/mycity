@@ -9,3 +9,4 @@ tmp/
 # coffeescript, sass
 public/javascripts
 public/stylesheets
+.sass-cache/*
