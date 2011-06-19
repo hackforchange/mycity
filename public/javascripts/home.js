@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 06:44:05 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 09:59:42 GMT from
  * /Users/phill/Projects/mycity/app/coffeescripts/home.coffee
  */
 
@@ -23,7 +23,13 @@
     defaultText = textarea.val();
     textarea.focus(focus);
     textarea.blur(blur);
-    return textarea.addClass('default-text');
+    textarea.addClass('default-text');
+    return $('.agree a').bind('ajax:complete', function(r, xhr) {
+      var response;
+      response = $.parseJSON(xhr.responseText);
+      $(this).parent().parent().children('.count').html(response.vote_count);
+      return false;
+    });
   };
   return $(document).ready(ready);
 })(jQuery);

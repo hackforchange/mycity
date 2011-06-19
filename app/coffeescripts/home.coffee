@@ -21,5 +21,12 @@
     textarea.blur(blur)
     textarea.addClass('default-text')
 
+    $('.agree a').bind 'ajax:complete', (r, xhr) ->
+      response = $.parseJSON(xhr.responseText)
+      $(this).parent().parent().children('.count').html(response.vote_count)
+      false
+
   $(document).ready(ready)
 )(jQuery)
+
+
