@@ -11,6 +11,7 @@ class Issue
 
   field :title
   field :description
+  field :tag
 
   validates_length_of :title, :in => 5..105, :allow_nil => false
 
@@ -21,4 +22,8 @@ class Issue
   end
 
   has_many :votes
+
+  index :title
+  index :tag
+
 end
