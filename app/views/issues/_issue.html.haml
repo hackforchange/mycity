@@ -1,5 +1,7 @@
 .issue
   .vote
+    .count= issue.votes.count
+    .agree= link_to 'agree?'
   .created= issue.created_at
   .title= issue.title
   .description= issue.description

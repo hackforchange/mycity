@@ -68,6 +68,7 @@
     clear: left
 
   .issue
+    position: relative
     .created
       border-bottom: solid 1px black
       text-align: right
@@ -79,3 +80,15 @@
     .description
       margin: 10px
     .vote
+      position: absolute
+      width: 60px
+      left: -80px
+      .count
+        background: #eee
+        padding: 5px
+        text-align: center
+      .agree
+        background: green
+        padding: 5px
+        text-align: center
+
