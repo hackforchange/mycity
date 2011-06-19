@@ -1,11 +1,17 @@
 .issue
   .vote
     .count= issue.votes.count
-    .agree
-      - if current_user
+    - if current_user && current_user.voted_on?(issue)
+      .agree.agreed
+        = link_to 'agreed!', api_issue_votes_path(issue), :remote => true, :method => :post
+
+    - elsif current_user
+      .agree
         = link_to 'agree?', api_issue_votes_path(issue), :remote => true, :method => :post
-      - else
+    - else
+      .agree
         = link_to 'agree?', new_user_session_path
+
   .created= issue.created_at
   .title= issue.title
   .description= issue.description
