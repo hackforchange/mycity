@@ -1,10 +1,10 @@
-# SQLite version 3.x
-#   gem install sqlite3
-# development:
-#   adapter: sqlite3
-#   database: db/development.sqlite3
-#   pool: 5
-#   timeout: 5000
+defaults:
+  adapter: postgresql
+
+development:
+  database: mycity_dev
+  username: mycity
+  password: password_for_mycity
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -15,8 +15,10 @@
 #   pool: 5
 #   timeout: 5000
 
-# production:
-#   adapter: sqlite3
-#   database: db/production.sqlite3
-#   pool: 5
-#   timeout: 5000
+<% db = URI.parse(ENV['SHARED_DATABASE_URL']) %>
+production:
+  adapter: postgresql
+  host: <%= db.host %>
+  username: <%= db.user %>
+  password: <%= db.password %>
+  database: <%= db.path[1..-1] %>
