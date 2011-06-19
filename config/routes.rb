@@ -1,9 +1,6 @@
 Mycity::Application.routes.draw do
   devise_for :users
-
   resources :issues
-  resources :home
-  root :to => "home#index"
 
   namespace :api do
     resources :users
@@ -11,4 +8,7 @@ Mycity::Application.routes.draw do
       resources :votes
     end
   end
+
+  resources :home
+  root :to => "home#index"
 end
