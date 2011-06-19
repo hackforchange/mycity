@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 12:17:57 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 12:18:50 GMT from
  * /home/jay/src/mycity/app/coffeescripts/home.coffee
  */
 

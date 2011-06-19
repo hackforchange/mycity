@@ -14,6 +14,8 @@ MyCity.Home =
         textarea.val(defaultText)
         textarea.addClass('default-text')
 
+      false
+
     ready = ->
       textarea = $('#new_issue textarea')
       defaultText = textarea.val()
@@ -33,13 +35,17 @@ MyCity.Home =
 
   AjaxForm: (($) ->
     issuesList = undefined
+    textarea = undefined
 
     ajaxComplete = (r, xhr) ->
       response = xhr.responseText
       issuesList.prepend(response)
+      textarea.val('')
+      textarea.blur()
 
     ready: ->
       issuesList = $('#issues .list')
+      textarea = $('#new_issue textarea')
       $('#new_issue').bind 'ajax:complete', ajaxComplete
   )(jQuery)
 
