@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 12:18:50 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 12:23:59 GMT from
  * /home/jay/src/mycity/app/coffeescripts/home.coffee
  */
 
@@ -16,22 +16,16 @@ MyCity.Home = {
     blur = function() {
       if (textarea.val() === '') {
         textarea.val(defaultText);
-        return textarea.addClass('default-text');
+        textarea.addClass('default-text');
       }
+      return false;
     };
     ready = function() {
-      var issuesList;
       textarea = $('#new_issue textarea');
       defaultText = textarea.val();
       textarea.focus(focus);
       textarea.blur(blur);
-      textarea.addClass('default-text');
-      issuesList = $('#issues .list');
-      return issuesList.delegate('.agree a', 'ajax:complete', function(r, xhr) {
-        var response;
-        response = $.parseJSON(xhr.responseText);
-        return $(this).parent().parent().children('.count').html(response.vote_count);
-      });
+      return textarea.addClass('default-text');
     };
     return {
       ready: ready
@@ -52,7 +46,12 @@ MyCity.Home = {
       ready: function() {
         issuesList = $('#issues .list');
         textarea = $('#new_issue textarea');
-        return $('#new_issue').bind('ajax:complete', ajaxComplete);
+        $('#new_issue').bind('ajax:complete', ajaxComplete);
+        return issuesList.delegate('.agree a', 'ajax:complete', function(r, xhr) {
+          var response;
+          response = $.parseJSON(xhr.responseText);
+          return $(this).parent().parent().children('.count').html(response.vote_count);
+        });
       }
     };
   })(jQuery)

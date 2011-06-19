@@ -24,12 +24,6 @@ MyCity.Home =
       textarea.blur(blur)
       textarea.addClass('default-text')
 
-      issuesList = $('#issues .list')
-
-      issuesList.delegate '.agree a', 'ajax:complete', (r, xhr) ->
-        response = $.parseJSON(xhr.responseText)
-        $(this).parent().parent().children('.count').html(response.vote_count)
-
     ready: ready
   )(jQuery)
 
@@ -47,6 +41,11 @@ MyCity.Home =
       issuesList = $('#issues .list')
       textarea = $('#new_issue textarea')
       $('#new_issue').bind 'ajax:complete', ajaxComplete
+
+      issuesList.delegate '.agree a', 'ajax:complete', (r, xhr) ->
+        response = $.parseJSON(xhr.responseText)
+        $(this).parent().parent().children('.count').html(response.vote_count)
+
   )(jQuery)
 
 jQuery(document).ready ->
