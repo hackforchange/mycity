@@ -3,4 +3,5 @@ class Vote
   include Mongoid::Timestamps
 
   embedded_in :issue
+  belongs_to :user
 end

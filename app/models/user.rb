@@ -12,4 +12,6 @@ class User
     validatable
 
   ).map &:to_sym
+
+  has_many :votes
 end
