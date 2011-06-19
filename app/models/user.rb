@@ -10,6 +10,7 @@ class User
     rememberable
     trackable
     validatable
+    token_authenticatable
 
   ).map(&:to_sym)
 
