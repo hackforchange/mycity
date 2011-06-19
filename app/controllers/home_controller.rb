@@ -1,7 +1,9 @@
 class HomeController < ApplicationController
 
   def index
-    @issues = Issue.recent
+    @sort = params[:sort] || 'recent'
+    @issues = Issue.recent if @sort == 'recent'
+    @issues = Issue.popular if @sort == 'popular'
   end
 
 end

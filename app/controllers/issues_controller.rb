@@ -2,7 +2,7 @@ class IssuesController < ApplicationController
   respond_to :html
 
   def index
-    @issues = Issue.all
+    @issues = Issue.popular
   end
 
   def create
