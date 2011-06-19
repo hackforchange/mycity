@@ -26,16 +26,6 @@ class Issue
   end
 
   def self.popular
-    Vote.only(:issue_id).aggregate.collect do |v|
-      i = Issue.find(v['issue_id'])
-      {
-        id: i.id,
-        title: i.title,
-        description: i.description,
-        tag: i.tag,
-        vote_count: v['count']
-      }
-    end
   end
 
   def self.maintenence
