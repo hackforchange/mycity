@@ -4,3 +4,5 @@
 #   # your code ...
 # )(jQuery)
 jQuery.noConflict()
+
+MyCity = {}
