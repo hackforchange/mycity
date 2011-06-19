@@ -24,6 +24,7 @@ MyCity.Home =
       textarea.blur(blur)
       textarea.addClass('default-text')
 
+    # -*- expose public method -*- #
     ready: ready
   )(jQuery)
 
@@ -37,6 +38,7 @@ MyCity.Home =
       textarea.val('')
       textarea.blur()
 
+    # -*- expose public method -*- #
     ready: ->
       issuesList = $('#issues .list')
       textarea = $('#new_issue textarea')
