@@ -6,6 +6,7 @@ Mycity::Application.routes.draw do
   root :to => "home#index"
 
   namespace :api do
+    resources :users
     resources :issues do
       resources :votes
     end
