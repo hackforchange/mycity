@@ -14,7 +14,7 @@
 
   .created= issue.created_at.getlocal
   .title= issue.title
-  .description= issue.description
+  // .description= issue.description
   - unless issue.tag.blank?
     Tagged As:
     .tagged= issue.tag
