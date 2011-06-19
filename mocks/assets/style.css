@@ -72,6 +72,7 @@ a {
   margin-top: 18px;
 }
 #issueForm form {
+  position: relative;
   background: #d9d9d9;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
