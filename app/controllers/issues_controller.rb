@@ -8,6 +8,7 @@ class IssuesController < ApplicationController
   def create
     @issue = Issue.new(params[:issue])
     @issue.save
+    respond_with @issue
   end
 
   def show
