@@ -7,13 +7,18 @@ class Issue
   end
 
   def self.popular
-
   end
 
   field :title
   field :description
 
   validates_length_of :title, :in => 5..105, :allow_nil => false
+
+  def as_json(opts={})
+    super.merge(
+      :votes_count => self.votes.count
+    )
+  end
 
   has_many :votes
 end
