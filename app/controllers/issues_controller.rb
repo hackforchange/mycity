@@ -7,12 +7,19 @@ class IssuesController < ApplicationController
 
   def create
     @issue = Issue.new(params[:issue])
-    @issue.save
-    respond_with @issue
+    if @issue.save
+      respond_with @issue
+    else
+      render :text => 'Error'
+    end
   end
 
   def show
-    @issue = Issue.find(params[:id])
+    if @issue = Issue.find(params[:id])
+      render :layout => false
+    else
+      render :text => 'Not Found', :status => 404
+    end
   end
 
 end
