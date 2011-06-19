@@ -4,7 +4,7 @@
 
 = form_for Issue.new, :remote => true do |f|
   - placeholder = capture do
-    &ndash; What are you concerning about in your city?
+    &ndash; What are you concerned about in your city?
     &ndash; Give it some tags (ex: #traffic...)
 
   = f.text_area :title, value: placeholder, cols: 30, rows: 10
