@@ -1,10 +1,10 @@
-/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 16:55:42 GMT from
- * /Users/phill/Projects/mycity/app/coffeescripts/home.coffee
+/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 18:14:57 GMT from
+ * /home/jay/src/mycity/app/coffeescripts/home.coffee
  */
 
 MyCity.Home = {
   Textarea: (function($) {
-    var blur, defaultText, focus, ready, textarea;
+    var blur, defaultText, focus, ready, submit, textarea;
     textarea = void 0;
     defaultText = void 0;
     focus = function() {
@@ -20,11 +20,21 @@ MyCity.Home = {
       }
       return false;
     };
+    submit = function() {
+      console.log('val', textarea.val());
+      console.log('length', textarea.val().length);
+      if (textarea.val() === defaultText || textarea.val().length <= 5) {
+        return false;
+      }
+    };
     ready = function() {
-      textarea = $('#new_issue textarea');
+      var form;
+      form = $('#new_issue');
+      textarea = form.find('textarea');
       defaultText = textarea.val();
       textarea.focus(focus);
       textarea.blur(blur);
+      form.submit(submit);
       return textarea.addClass('default-text');
     };
     return {

@@ -12,6 +12,7 @@ class IssuesController < ApplicationController
     @issue = Issue.new(params[:issue])
     if @issue.save
       respond_with @issue
+      current_user.vote!(@issue) if current_user
     else
       render :text => 'Error'
     end

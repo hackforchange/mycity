@@ -16,12 +16,18 @@ MyCity.Home =
 
       false
 
+    submit = ->
+      if textarea.val() is defaultText or textarea.val().length <= 5
+        return false
+
     ready = ->
-      textarea = $('#new_issue textarea')
+      form = $('#new_issue')
+      textarea = form.find('textarea')
       defaultText = textarea.val()
 
       textarea.focus(focus)
       textarea.blur(blur)
+      form.submit(submit)
       textarea.addClass('default-text')
 
     # -*- expose public method -*- #
