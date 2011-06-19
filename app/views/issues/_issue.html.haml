@@ -1,7 +1,7 @@
 .issue
   .vote
     .count= issue.votes.count
-    .agree= link_to 'agree?'
+    .agree= link_to 'agree?', api_issue_votes_path(issue), :remote => true, :method => :post
   .created= issue.created_at
   .title= issue.title
   .description= issue.description
