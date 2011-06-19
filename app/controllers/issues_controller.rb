@@ -2,7 +2,10 @@ class IssuesController < ApplicationController
   respond_to :html
 
   def index
-    @issues = Issue.popular
+    @sort = params[:sort] || 'recent'
+    @issues = Issue.recent if @sort == 'recent'
+    @issues = Issue.popular if @sort == 'popular'
+    render :layout => false
   end
 
   def create

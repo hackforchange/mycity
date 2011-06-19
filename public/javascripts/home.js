@@ -1,5 +1,5 @@
-/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 16:03:51 GMT from
- * /home/jay/src/mycity/app/coffeescripts/home.coffee
+/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 16:55:42 GMT from
+ * /Users/phill/Projects/mycity/app/coffeescripts/home.coffee
  */
 
 MyCity.Home = {
@@ -32,7 +32,7 @@ MyCity.Home = {
     };
   })(jQuery),
   AjaxForm: (function($) {
-    var ajaxComplete, issuesList, textarea;
+    var ajaxComplete, ajaxSwitchSort, issuesList, textarea;
     issuesList = void 0;
     textarea = void 0;
     ajaxComplete = function(r, xhr) {
@@ -42,17 +42,27 @@ MyCity.Home = {
       textarea.val('');
       return textarea.blur();
     };
+    ajaxSwitchSort = function(r, xhr) {
+      var response;
+      response = xhr.responseText;
+      issuesList.html(response);
+      $(this).parents('#issues ul').children('li').removeClass('active');
+      return $(this).parent().addClass('active');
+    };
     return {
       ready: function() {
+        var issuesNav;
         issuesList = $('#issues .list');
+        issuesNav = $('#issues .nav');
         textarea = $('#new_issue textarea');
         $('#new_issue').bind('ajax:complete', ajaxComplete);
-        return issuesList.delegate('.agree a', 'ajax:complete', function(r, xhr) {
+        issuesList.delegate('.agree a', 'ajax:complete', function(r, xhr) {
           var response;
           response = $.parseJSON(xhr.responseText);
           $(this).parents('.vote').children('.count').html(response.vote_count);
           return $(this).html('agreed!').parent().addClass('agreed');
         });
+        return issuesNav.delegate('a', 'ajax:complete', ajaxSwitchSort);
       }
     };
   })(jQuery)

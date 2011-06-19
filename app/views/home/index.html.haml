@@ -12,8 +12,8 @@
 
 #issues
   %ul.nav
-    %li{ :class => @sort == 'recent' ? :active : ''  }= link_to 'Recent', '?sort=recent'
-    %li{ :class => @sort == 'popular' ? :active : '' }= link_to 'Popular', '?sort=popular'
+    %li.active= link_to 'Recent', '/issues?sort=recent', :remote => true
+    %li= link_to 'Popular', '/issues?sort=popular', :remote => true
 
   .list
     = render @issues

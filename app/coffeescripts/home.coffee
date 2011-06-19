@@ -38,9 +38,16 @@ MyCity.Home =
       textarea.val('')
       textarea.blur()
 
+    ajaxSwitchSort = (r, xhr) ->
+      response = xhr.responseText
+      issuesList.html(response)
+      $(this).parents('#issues ul').children('li').removeClass('active')
+      $(this).parent().addClass('active')
+
     # -*- expose public method -*- #
     ready: ->
       issuesList = $('#issues .list')
+      issuesNav = $('#issues .nav')
       textarea = $('#new_issue textarea')
       $('#new_issue').bind 'ajax:complete', ajaxComplete
 
@@ -48,6 +55,8 @@ MyCity.Home =
         response = $.parseJSON(xhr.responseText)
         $(this).parents('.vote').children('.count').html(response.vote_count)
         $(this).html('agreed!').parent().addClass('agreed')
+
+      issuesNav.delegate('a', 'ajax:complete', ajaxSwitchSort)
 
   )(jQuery)
 
