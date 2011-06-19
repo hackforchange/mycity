@@ -1,7 +1,5 @@
-defaults:
-  adapter: postgresql
-
 development:
+  adapter: postgresql
   database: mycity_dev
   username: mycity
   password: password_for_mycity_dev
