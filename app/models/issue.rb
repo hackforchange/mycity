@@ -3,12 +3,6 @@ class Issue < ActiveRecord::Base
 
   has_many :votes
 
-  def as_json(opts={})
-    super.merge(
-      :votes_count => self.votes.count
-    )
-  end
-
   def self.recent
     order { created_at.desc }
   end
