@@ -1,6 +1,5 @@
-Mycity::Application.routes.draw do
+Mycity::Application.routes.draw do  resources :issues
   devise_for :users
-  resources :issues
 
   namespace :api do
     resources :users

@@ -12,7 +12,7 @@ Devise.setup do |config|
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
-  # require 'devise/orm/mongoid'
+  require 'devise/orm/active_record'
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -54,7 +54,7 @@ Devise.setup do |config|
   config.stretches = 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "6e4a347c274e561aed4159b6a67b0952e88f640f43f7a1185f75b842fe6d622de3b169e952a4264d21200abe35b38128bd74bd32103bd7cde3d562a9678f42c3"
+  # config.pepper = "b233db5dd3c40b2f207ad036e34a7a7f9170fdf2c903b20fd1f418b3d76e01977f572c77e470fcf82ef43ccd69e52e92aaf78a73fe1422651b422b82355821c1"
 
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
@@ -141,11 +141,11 @@ Devise.setup do |config|
 
   # ==> Configuration for :token_authenticatable
   # Defines name of the authentication token params key
-  config.token_authentication_key = :auth_token
+  # config.token_authentication_key = :auth_token
 
   # If true, authentication through token does not store user in session and needs
   # to be supplied on each request. Useful if you are using the token as API token.
-  config.stateless_token = true
+  # config.stateless_token = false
 
   # ==> Scopes configuration
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
