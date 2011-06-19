@@ -48,7 +48,6 @@
     line-height: 1;
     .borderRadius(5px);
     position: relative;
-    cursor: pointer;
     text-transform: capitalize;
     border: solid 1px darken(@colorGrayMedium, 1);
     background: @colorGrayMedium url('bgrBtn.png') center left repeat;
@@ -56,8 +55,10 @@
     box-shadow: 0 1px 0 lighten(@colorGrayMedium, 60);
     a{
         color: @colorLight;
+        cursor: default;
     }
     &.active{
+        cursor: pointer;
         background-color: @colorGreen;
         border: solid 1px lighten(@colorGreen, 10);
         text-shadow: 0 -1px 0 darken(@colorGreen, 30);
@@ -124,13 +125,16 @@ a{
         text-align: right;
     }
     textarea{
+        font-family: @fontSerif;
         border: solid 1px @colorGrayLight;
         width: 420px - 2px;
         padding: 10px;
         .borderRadius(5px);
         outline: 0;
-        color: @colorGrayLight;
+        color: lighten(@colorGrayMedium, 20);
         text-align: left;
+        font-size: 14px;
+        line-height: 20px;
         &:focus{
             color: @colorGrayDark;
         }
