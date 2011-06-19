@@ -16,3 +16,15 @@ del { text-decoration:line-through; }
 
 /* tables still need 'cellspacing="0"' in the markup */
 table { border-collapse:collapse; border-spacing:0; }
+
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}

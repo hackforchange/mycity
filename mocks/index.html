@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://www.w3.org/2005/10/profile">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -23,15 +23,15 @@
         <div id='mainContainer'>
         	<div id='header'>
         	    <div id='logo'>mycity</div>
+        	    <div id='currentLocation' class="clearfix"><input type="text" name="location" value="san francisco"/></div>
+        	    <h2>What's about my city?</h2>
+        	    
         	</div>
         	<div id='mainContent'>
-        	    <div id='location'>san francisco</div>
         	    <div id='issueForm'>
         	        <form>
-            	        <textarea rows="10" cols="30">
-            	            input your issue here
-            	        </textarea>
-            	        <input type="submit" value="Submit" />
+            	        <textarea rows="10" cols="30">input your text here</textarea>
+            	        <span class="btn submit"><a href="#">that's it!</a></span>
         	        </form>
         	    </div>
         	    <ul id='nav'>
@@ -41,21 +41,24 @@
         	    <div id='sections'>
     	            <div id='sectionRecent'>
     	                <ul>
-    	                    <li>most recent stuff here</li>
-    	                    <li>most recent stuff here</li>
-    	                    <li>most recent stuff here</li>
-    	                    <li>most recent stuff here</li>
-    	                    <li>most recent stuff here</li>
-    	                    <li>most recent stuff here</li>
+    	                    <li>
+    	                        <div class="meta clearfix">
+    	                            <div class="vote">
+    	                                <div class="count">
+    	                                    <span>5</span>
+    	                                </div>
+    	                                <div class="agree">agree!</div>
+    	                            </div>
+    	                            <div class="date">Sat, June 18, 2011 at 11:50am</div>
+    	                        </div>
+    	                        <h3>Muni needs to be better</h3>
+    	                        <div class="voteUp"></div>
+    	                    </li>
     	                </ul>
     	            </div>
     	            <div id='sectionPopular'>
     	                <ul>
-    	                    <li>most popular stuff here</li>
-    	                    <li>most popular stuff here</li>
-    	                    <li>most popular stuff here</li>
-    	                    <li>most popular stuff here</li>
-    	                    <li>most popular stuff here</li>
+    	                    
     	                </ul>
     	                
     	            </div>
