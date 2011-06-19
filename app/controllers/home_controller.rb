@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @issues = Issue.all
+    @issues = Issue.recent
   end
 
 end
