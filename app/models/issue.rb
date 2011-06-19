@@ -14,7 +14,7 @@ class Issue < ActiveRecord::Base
   end
 
   def self.popular
-    find(:all, :conditions => "votes_count is not null", :order => 'votes_count desc')
+    where { votes_count != nil }.order { votes_count.desc }
   end
 
   def self.maintenence
