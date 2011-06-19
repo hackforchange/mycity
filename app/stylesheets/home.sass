@@ -42,12 +42,17 @@
   margin: 0 auto
 
   .nav
+    list-style: none
+    margin: 0
+    padding: 0
     li
+      list-style: none
       font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif
       float: left
       color: #777777
       font-size: 13px
       margin: 10px 15px 5px 0
+      padding: 0
 
       padding-bottom: 5px
       &.active
@@ -61,3 +66,16 @@
 
   .list
     clear: left
+
+  .issue
+    .created
+      border-bottom: solid 1px black
+      text-align: right
+    .title
+      padding-top: 3px
+      font-size: 18px
+      line-height: 1.5em
+      color: #362F2D
+    .description
+      margin: 10px
+    .vote
