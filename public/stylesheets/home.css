@@ -106,7 +106,7 @@
   margin: 10px;
 }
 /* line 81, ../../app/stylesheets/home.sass */
-#issues .issue .taged {
+#issues .issue .tagged {
   border: solid 1px #cccccc;
   background: yellow;
   color: black;
@@ -133,7 +133,7 @@
 }
 /* line 101, ../../app/stylesheets/home.sass */
 #issues .issue .vote .agree {
-  background: green;
+  background: #58a83e;
   padding: 5px;
   text-align: center;
 }
