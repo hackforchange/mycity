@@ -2,6 +2,14 @@ class Issue
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  def self.recent
+    all.desc(:created_at)
+  end
+
+  def self.popular
+
+  end
+
   field :title
   field :description
 
