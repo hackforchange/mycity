@@ -3,7 +3,7 @@ module Api
     respond_to :json
 
     def index
-      @issues = Issue.all.desc(:created_at)
+      @issues = Issue.recent
 
       render :json => @issues
     end

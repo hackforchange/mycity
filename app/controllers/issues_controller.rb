@@ -6,7 +6,6 @@ class IssuesController < ApplicationController
   end
 
   def create
-    raise "LOLWTF"
     @issue = Issue.new(params[:issue])
     if @issue.save
       respond_with @issue
