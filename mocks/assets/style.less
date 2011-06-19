@@ -42,7 +42,6 @@
 .btn{
     display: inline-block;
     padding: 5px 15px 6px;
-    background-color: @colorGreen;
     text-decoration: none;
     font-weight: bold;
     font-size: 12px;
@@ -51,17 +50,17 @@
     position: relative;
     cursor: pointer;
     text-transform: capitalize;
-    border: solid 1px darken(@colorGreen, 5);
-    text-shadow: 0 -1px 0 darken(@colorGreen, 30);
-    box-shadow: 0 1px 0 lighten(@colorGreen, 60);
+    border: solid 1px darken(@colorGrayMedium, 1);
+    background: @colorGrayMedium url('bgrBtn.png') center left repeat;
+    text-shadow: 0 -1px 0 darken(@colorGrayMedium, 30);
+    box-shadow: 0 1px 0 lighten(@colorGrayMedium, 60);
     a{
         color: @colorLight;
     }
     &.active{
-        
         background-color: @colorGreen;
-        border: solid 1px darken(@colorGreen, 10);
-        text-shadow: 0 -1px 0 darken(@colorGreen, 30);    
+        border: solid 1px lighten(@colorGreen, 10);
+        text-shadow: 0 -1px 0 darken(@colorGreen, 30);
     }
 }
 
@@ -85,7 +84,7 @@ a{
         margin-top: 18px;
         text-indent: -9999px;
         height: 58px;
-        background: url('heading-question.png');
+        background: url('heading-question.png') top left no-repeat;
     }
 }
 
@@ -164,6 +163,7 @@ a{
         &.active{
             color: @colorGreen;
             font-weight: bold;
+            .borderTB(0, 5px, @colorGreen);
         }
     }
 }
@@ -212,8 +212,11 @@ a{
             font-size: 12px;
             line-height: 25px;
             color: @colorLight;
-            background: @colorGreen;
             cursor: pointer;
+            background-color: @colorGreen;
+            &:hover{
+                background: @colorGreen url('bgrBtn.png') top left repeat;
+            }
         }
     }
 }
