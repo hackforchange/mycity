@@ -46,7 +46,7 @@ MyCity.Home =
 
       issuesList.delegate '.agree a', 'ajax:complete', (r, xhr) ->
         response = $.parseJSON(xhr.responseText)
-        $(this).parent().parent().children('.count').html(response.vote_count)
+        $(this).parents('.vote').children('.count').html(response.vote_count)
 
   )(jQuery)
 
