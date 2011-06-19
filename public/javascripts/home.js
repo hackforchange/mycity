@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 12:28:15 GMT from
+/* DO NOT MODIFY. This file was compiled Sun, 19 Jun 2011 16:03:51 GMT from
  * /home/jay/src/mycity/app/coffeescripts/home.coffee
  */
 
@@ -50,7 +50,8 @@ MyCity.Home = {
         return issuesList.delegate('.agree a', 'ajax:complete', function(r, xhr) {
           var response;
           response = $.parseJSON(xhr.responseText);
-          return $(this).parents('.vote').children('.count').html(response.vote_count);
+          $(this).parents('.vote').children('.count').html(response.vote_count);
+          return $(this).html('agreed!').parent().addClass('agreed');
         });
       }
     };

@@ -142,16 +142,9 @@
   position: absolute;
   width: 60px;
   left: -80px;
-  border: solid 1px black;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
   top: 15px;
 }
-/* line 105, ../../app/stylesheets/home.sass */
+/* line 103, ../../app/stylesheets/home.sass */
 #issues .issue .vote .count {
   background: #362f2d;
   font-size: 15px;
@@ -160,27 +153,21 @@
   text-align: center;
   font-weight: bold;
   font-size: 20px;
-  -moz-border-radius: 5px 5px 0 0;
-  -webkit-border-radius: 5px 5px 0 0;
-  -o-border-radius: 5px 5px 0 0;
-  -ms-border-radius: 5px 5px 0 0;
-  -khtml-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
   color: #f8f8ee;
 }
-/* line 115, ../../app/stylesheets/home.sass */
+/* line 112, ../../app/stylesheets/home.sass */
 #issues .issue .vote .agree {
   background: green;
   padding: 5px;
   text-align: center;
-  -moz-border-radius: 0 0 5px 5px;
-  -webkit-border-radius: 0 0 5px 5px;
-  -o-border-radius: 0 0 5px 5px;
-  -ms-border-radius: 0 0 5px 5px;
-  -khtml-border-radius: 0 0 5px 5px;
-  border-radius: 0 0 5px 5px;
 }
-/* line 120, ../../app/stylesheets/home.sass */
+/* line 116, ../../app/stylesheets/home.sass */
 #issues .issue .vote .agree a {
   color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+/* line 122, ../../app/stylesheets/home.sass */
+#issues .issue .vote .agree.agreed {
+  background-color: #362f2d;
 }

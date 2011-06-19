@@ -99,8 +99,6 @@
       position: absolute
       width: 60px
       left: -80px
-      border: solid 1px black
-      +border-radius(5px)
       top: 15px
       .count
         background: $color-dark
@@ -110,13 +108,18 @@
         text-align: center
         font-weight: bold
         font-size: 20px
-        +border-radius(5px 5px 0 0)
         color: $off-white
       .agree
         background: green
         padding: 5px
         text-align: center
-        +border-radius(0 0 5px 5px)
         a
           color: white
+          font:
+            weight: bold
+            size: 12px
+
+        &.agreed
+          background-color: $color-dark
+
 
