@@ -107,8 +107,8 @@
 }
 /* line 81, ../../app/stylesheets/home.sass */
 #issues .issue .tagged {
-  border: solid 1px #cccccc;
-  background: yellow;
+  border-bottom: 1px solid #fff67d;
+  background: #fffde3;
   color: black;
   display: inline-block;
   padding: 3px 5px;
