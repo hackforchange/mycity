@@ -7,5 +7,5 @@ class Issue
 
   validates_length_of :title, :in => 5..105, :allow_nil => false
 
-  embeds_many :votes
+  has_many :votes
 end

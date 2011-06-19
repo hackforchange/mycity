@@ -2,6 +2,10 @@ class Vote
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  embedded_in :issue
+
+  field :user_id
   belongs_to :user
+
+  field :issue_id
+  belongs_to :issue
 end
