@@ -15,4 +15,10 @@ class User
   ).map(&:to_sym)
 
   has_many :votes
+
+  index :email, :unique => true
+  index :password
+
+  before_create :ensure_authentication_token
+
 end
