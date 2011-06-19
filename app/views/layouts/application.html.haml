@@ -13,9 +13,12 @@
       .notices
         .notice= notice
 
-    #mainContainer
+    #main-container
       #header
-        #logo mycity
+        = image_tag 'header/logo.png', alt: 'MyCity'
+        .city San Francisco
+
+        = image_tag 'header/question.png', alt: "What's About My City?"
 
       = yield
 

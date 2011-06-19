@@ -1,1 +1,18 @@
-%h1 Hello World
+- content_for :head do
+  = stylesheet_link_tag 'home'
+
+= form_for Issue.new do |f|
+  - placeholder = capture do
+    &ndash; What are you concerning about in your city?
+    &ndash; Give it some tags (ex: #traffic...)
+
+  = f.text_area :title, value: placeholder
+  = f.submit "That's It!"
+
+#issues
+  %ul.nav
+    %li.active Recent
+    %li Popular
+
+  .list
+    = render @issues
