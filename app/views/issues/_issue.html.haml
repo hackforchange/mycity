@@ -12,7 +12,7 @@
       .agree
         = link_to 'agree?', new_user_session_path
 
-  .created= issue.created_at
+  .created= issue.created_at.getlocal
   .title= issue.title
   .description= issue.description
   - unless issue.tag.blank?
