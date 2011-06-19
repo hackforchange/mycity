@@ -7,6 +7,4 @@ tmp/
 .*.sw[a-z]
 
 # coffeescript, sass
-public/javascripts
-public/stylesheets
 .sass-cache/*

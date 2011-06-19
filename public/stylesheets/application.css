@@ -1,0 +1,201 @@
+@import url(reset.css);
+/* line 5, ../../app/stylesheets/application.sass */
+body {
+  font-size: 62.5%;
+  font-weight: 100;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* line 10, ../../app/stylesheets/application.sass */
+a {
+  text-decoration: none;
+}
+
+/* line 13, ../../app/stylesheets/application.sass */
+#header {
+  text-align: center;
+  margin-top: 18px;
+}
+/* line 17, ../../app/stylesheets/application.sass */
+#header .city {
+  margin: 0 auto 20px;
+  line-height: 1.5em;
+  width: 180px;
+  font-style: italic;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  color: #777777;
+  border-bottom: solid 1px #cccccc;
+}
+
+/* line 31, ../../app/stylesheets/application.sass */
+#logo {
+  text-indent: -9999px;
+  margin: 0 auto;
+  width: 140px;
+  height: 65px;
+  background: url('/images/header/logo.png?1308456173') top left no-repeat;
+}
+
+/* line 38, ../../app/stylesheets/application.sass */
+#currentLocation {
+  text-align: center;
+}
+/* line 40, ../../app/stylesheets/application.sass */
+#currentLocation input {
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-style: italic;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  text-transform: capitalize;
+  color: #777777;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px #cccccc;
+}
+
+/* line 53, ../../app/stylesheets/application.sass */
+#issueForm {
+  margin-top: 18px;
+}
+/* line 55, ../../app/stylesheets/application.sass */
+#issueForm form {
+  background: #d9d9d9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: solid 1px #cccccc;
+  padding: 10px;
+  margin: 18px 0;
+  text-align: right;
+}
+/* line 64, ../../app/stylesheets/application.sass */
+#issueForm textarea {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  border: solid 1px #cccccc;
+  width: 418px;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  outline: 0;
+  color: #aaaaaa;
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+}
+/* line 77, ../../app/stylesheets/application.sass */
+#issueForm textarea:focus {
+  color: #362f2d;
+}
+/* line 79, ../../app/stylesheets/application.sass */
+#issueForm .btn {
+  font-size: 14px;
+  line-height: 1.2em;
+  margin-top: 9px;
+  font-weight: normal;
+}
+
+/* line 85, ../../app/stylesheets/application.sass */
+#nav {
+  overflow: hidden;
+  margin: 36px 0 18px;
+  padding: 9px 0;
+  border-top: solid 10px #777777;
+  border-bottom: solid 0px #777777;
+}
+/* line 91, ../../app/stylesheets/application.sass */
+#nav li {
+  display: inline;
+}
+/* line 93, ../../app/stylesheets/application.sass */
+#nav a {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 2px 0;
+  float: left;
+  margin-right: 18px;
+  color: #777777;
+  text-transform: capitalize;
+}
+/* line 102, ../../app/stylesheets/application.sass */
+#nav a.active {
+  color: #58a83e;
+  font-weight: bold;
+  border-top: solid 0 #58a83e;
+  border-bottom: solid 5px #58a83e;
+}
+
+/* line 108, ../../app/stylesheets/application.sass */
+#sections li {
+  margin-bottom: 36px;
+}
+/* line 110, ../../app/stylesheets/application.sass */
+#sections li h3 {
+  border-top: solid 1px #d9d9d9;
+  border-bottom: solid 0px #d9d9d9;
+  padding-top: 3px;
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #362f2d;
+}
+/* line 117, ../../app/stylesheets/application.sass */
+#sections li .meta {
+  color: #777777;
+  font-size: 10px;
+  line-height: 15px;
+  position: relative;
+}
+/* line 122, ../../app/stylesheets/application.sass */
+#sections li .date {
+  text-align: right;
+}
+/* line 124, ../../app/stylesheets/application.sass */
+#sections li .vote {
+  color: #f8f8ee;
+  position: absolute;
+  left: -80px;
+  top: 15px;
+  width: 60px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+/* line 133, ../../app/stylesheets/application.sass */
+#sections li .count {
+  padding: 5px 0;
+  background: #362f2d;
+}
+/* line 136, ../../app/stylesheets/application.sass */
+#sections li .count span {
+  display: block;
+  font-size: 15px;
+  line-height: 15px;
+}
+/* line 140, ../../app/stylesheets/application.sass */
+#sections li .agree {
+  text-shadow: 0 1px 0 #777777;
+  display: block;
+  font-size: 12px;
+  line-height: 25px;
+  color: #f8f8ee;
+  cursor: pointer;
+  background-color: #58a83e;
+}
+/* line 148, ../../app/stylesheets/application.sass */
+#sections li .agree:hover {
+  background: #58a83e url("bgrBtn.png") top left repeat;
+}
+
+/* line 151, ../../app/stylesheets/application.sass */
+#footer {
+  text-align: center;
+}
+/* line 153, ../../app/stylesheets/application.sass */
+#footer p {
+  font-size: 10px;
+  line-height: 18px;
+}
