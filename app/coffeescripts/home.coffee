@@ -59,7 +59,7 @@ MyCity.Home =
 
       issuesList.delegate '.agree a', 'ajax:complete', (r, xhr) ->
         response = $.parseJSON(xhr.responseText)
-        $(this).parents('.vote').children('.count').html(response.vote_count)
+        $(this).parents('.vote').children('.count').html(response.votes_count)
         $(this).html('agreed!').parent().addClass('agreed')
 
       issuesNav.delegate('a', 'ajax:complete', ajaxSwitchSort)

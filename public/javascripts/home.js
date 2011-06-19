@@ -69,7 +69,7 @@ MyCity.Home = {
         issuesList.delegate('.agree a', 'ajax:complete', function(r, xhr) {
           var response;
           response = $.parseJSON(xhr.responseText);
-          $(this).parents('.vote').children('.count').html(response.vote_count);
+          $(this).parents('.vote').children('.count').html(response.votes_count);
           return $(this).html('agreed!').parent().addClass('agreed');
         });
         return issuesNav.delegate('a', 'ajax:complete', ajaxSwitchSort);
