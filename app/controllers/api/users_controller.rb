@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
     end
 
     if user
-      render :json => "{\"auth_token\":\"#{user.authentication_token}\"}"
+      render :json => { :auth_token => user.authentication_token }
     else
       render :json => "ERROR", :status => 401
     end
