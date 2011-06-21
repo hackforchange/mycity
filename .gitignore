@@ -8,3 +8,6 @@ tmp/
 
 # coffeescript, sass
 .sass-cache/*
+
+config/database.yml
+

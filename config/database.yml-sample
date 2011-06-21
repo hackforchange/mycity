@@ -13,7 +13,7 @@ development:
 #   pool: 5
 #   timeout: 5000
 
-<% db = URI.parse(ENV['SHARED_DATABASE_URL'] || 'postgres://user:pass@foo.bar.com/baz') %>
+<% db = URI.parse(ENV['SHARED_DATABASE_URL'] || 'postgres://mycity:password_for_mycity@0.0.0.0/mycity') %>
 production:
   adapter: postgresql
   host: <%= db.host %>
