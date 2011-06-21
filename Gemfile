@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
-gem 'rake', '0.8.7'
 gem 'unicorn'
 gem 'jquery-rails', '~> 1.0.0'
 
